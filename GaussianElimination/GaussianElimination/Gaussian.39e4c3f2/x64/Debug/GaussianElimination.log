@@ -1,0 +1,3 @@
+﻿  App_Ops.cpp
+C:\CodeRepo\Portfolio\GaussianElimination\GaussianElimination\App_Ops.cpp(12,39): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  GaussianElimination.vcxproj -> C:\CodeRepo\Portfolio\GaussianElimination\GaussianElimination\x64\Debug\GaussianElimination.exe
