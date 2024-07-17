@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "App_Ops.cpp",
               "ToolTip": "C:\\CodeRepo\\Portfolio\\GaussianElimination\\GaussianElimination\\App_Ops.cpp",
               "RelativeToolTip": "App_Ops.cpp",
-              "ViewState": "AQIAACgAAAAAAAAAAAAAADwAAAAVAAAA",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAACgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-07-15T20:10:46.759Z",
               "EditorCaption": ""
@@ -47,8 +47,7 @@
               "RelativeToolTip": "App_Ops.h",
               "ViewState": "AQIAAAUAAAAAAAAAAAAAABgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-07-15T20:17:44.083Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-15T20:17:44.083Z"
             },
             {
               "$type": "Document",
@@ -60,8 +59,7 @@
               "RelativeToolTip": "main.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-07-15T18:14:56.517Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-15T18:14:56.517Z"
             }
           ]
         }
