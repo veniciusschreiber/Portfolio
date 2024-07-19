@@ -26,7 +26,7 @@ float* QRFac::getRMatrix()
 //Behavior
 int QRFac::formMatrixUp()
 {
-	unsigned int a;
+	int a = 0;
 
 	for (int i = 0; i <= MATRIX_M_AMOUNT; i++)
 	{
@@ -68,7 +68,7 @@ int QRFac::printQMatrix()
 
 	for (int i = 0; i <= MATRIX_ELEMENTS_AMOUNT; i++)
 	{
-		std::cout << *(getQMatrix() + i) << ", ";
+		std::cout << std::to_string( *(getQMatrix() + i)) << ", ";
 
 		if (i == 2 || i == 5 || i == MATRIX_ELEMENTS_AMOUNT)
 		{
@@ -87,7 +87,6 @@ int QRFac::printRMatrix()
 
 	for (int i = 0; i <= MATRIX_ELEMENTS_AMOUNT; i++)
 	{
-		
 		std::cout << std::to_string( *(getRMatrix() + i) ) << ", ";
 
 		if (i == 2 || i == 5 || i == MATRIX_ELEMENTS_AMOUNT)
@@ -111,8 +110,6 @@ int QRFac::computeRMatrix()
 		{
 			RMatrix[i][j] = computeAQ(j, i);
 		}
-		
-		std::cout << std::endl;
 
 		contador.erase(contador.begin());
 	}
@@ -125,7 +122,7 @@ float QRFac::computeAQ(int colAParam, int colQParam)
 
 	for(int i = 0; i <= 2; i++)
 	{
-		linearCombination = linearCombination + (AMatrix[i][colAParam] * QMatrix[i][colQParam]);
+		linearCombination = std::stof(std::to_string(linearCombination + (AMatrix[i][colAParam] * QMatrix[i][colQParam])));
 	}
 	return linearCombination;
 }
@@ -148,7 +145,7 @@ int QRFac::computeQMatrix()
 
 		for(int t = 1; t <= i; t++)//how many times will compute "an - (an.qn)qn"
 		{
-			columnVector = { computeVectorQHat(i) };
+			columnVector = computeVectorQHat(i) ;
 		}
 
 		if(i != 0)//to store qn-hat temporaly on QMatrix
@@ -158,7 +155,9 @@ int QRFac::computeQMatrix()
 				QMatrix[t][i] = columnVector.at(t);
 			}
 		}
-		
+
+		columnVector.clear();
+
 		columnVector = calculateVectorNorm(i);
 
 		for(int j = 0; j <= 2 ; j++)//m
@@ -175,31 +174,42 @@ int QRFac::computeQMatrix()
 std::vector<float> QRFac::computeVectorQHat(int colParam)
 {
 	std::vector<float> q_hat;
+	float dot = 0;
 
-	//formulae to compute "an - (an.qn)qn"
+	//Gram-Schmidt Process
+	//formulae to compute "an - (qn an)qn"
 
-	//result = (anqn)
+	//result = dot(qn an)
 	for(int j = 0; j < colParam; j++)
 	{
 		for (int i = 0; i <= 2; i++)
 		{
-			q_hat.push_back(AMatrix[i][colParam] * QMatrix[i][j]);
+			dot = dot + (AMatrix[i][colParam] * QMatrix[i][j]);
 		}
 
 		//(result)qn
-		
 		for (int i = 0; i <= 2; i++)
 		{
-			q_hat.at(i) = q_hat.at(i) * QMatrix[i][j];
-		}
-
-		//an - result
-		for (int i = 0; i <= 2; i++)
-		{
-			q_hat.at(i) = AMatrix[i][colParam] - q_hat.at(i);
-		}
+			q_hat.push_back( dot * QMatrix[i][j] );
+		}	
 	}
 	
+	//an - result
+	for (int i = 0; i <= 2; i++)
+	{
+		
+		q_hat.at(i) = std::stof(std::to_string(
+								AMatrix[i][colParam] - q_hat.at(i)));
+			
+
+		if(q_hat.size() == 6)
+		{
+			q_hat.at(i) = std::stof(std::to_string(
+									AMatrix[i][colParam] - q_hat.at(i + 3)));
+				
+		}
+	}
+
 	return q_hat;
 }
 
@@ -210,22 +220,22 @@ std::vector<float> QRFac::calculateVectorNorm(int colParam)
 
 	if (colParam == 0)
 	{
-		result = (pow(AMatrix[0][colParam], 2)
-			+ pow(AMatrix[1][colParam], 2)
-			+ pow(AMatrix[2][colParam], 2));
+		result = (pow( AMatrix[0][colParam], 2 )
+			+ pow( AMatrix[1][colParam], 2 )
+			+ pow( AMatrix[2][colParam], 2 ));
 	}
 	else
 	{
-		result = (pow(QMatrix[0][colParam], 2)
-			+ pow(QMatrix[1][colParam], 2)
-			+ pow(QMatrix[2][colParam], 2));
+		result = (pow( QMatrix[0][colParam], 2)
+			+ pow( QMatrix[1][colParam], 2)
+			+ pow( QMatrix[2][colParam], 2));
 	}
 
-	result = sqrt(result);
+	result = sqrt( result );
 
 	for(int i = 0; i <= 2; i++)
 	{
-		vectorColumn.push_back( QMatrix[i][colParam] / result);
+		vectorColumn.push_back( result == 0 ? 0 : QMatrix[i][colParam] / result);
 	}
 	
 	return vectorColumn;

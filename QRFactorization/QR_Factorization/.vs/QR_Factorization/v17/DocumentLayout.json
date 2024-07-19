@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\CodeRepo\\Portfolio\\QRFactorization\\QR_Factorization\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CAB3DA5F-6598-4D85-894A-DECDFC28373F}|QR_Factorization.vcxproj|C:\\CodeRepo\\Portfolio\\QRFactorization\\QR_Factorization\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{CAB3DA5F-6598-4D85-894A-DECDFC28373F}|QR_Factorization.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CAB3DA5F-6598-4D85-894A-DECDFC28373F}|QR_Factorization.vcxproj|C:\\CodeRepo\\Portfolio\\QRFactorization\\QR_Factorization\\Math_Ops.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{CAB3DA5F-6598-4D85-894A-DECDFC28373F}|QR_Factorization.vcxproj|solutionrelative:Math_Ops.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAB3DA5F-6598-4D85-894A-DECDFC28373F}|QR_Factorization.vcxproj|C:\\CodeRepo\\Portfolio\\QRFactorization\\QR_Factorization\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CAB3DA5F-6598-4D85-894A-DECDFC28373F}|QR_Factorization.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CAB3DA5F-6598-4D85-894A-DECDFC28373F}|QR_Factorization.vcxproj|C:\\CodeRepo\\Portfolio\\QRFactorization\\QR_Factorization\\Math_Ops.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
@@ -34,25 +34,24 @@
               "RelativeToolTip": "Math_Ops.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-07-17T20:55:40.463Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-17T20:55:40.463Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Math_Ops.cpp",
               "DocumentMoniker": "C:\\CodeRepo\\Portfolio\\QRFactorization\\QR_Factorization\\Math_Ops.cpp",
               "RelativeDocumentMoniker": "Math_Ops.cpp",
               "ToolTip": "C:\\CodeRepo\\Portfolio\\QRFactorization\\QR_Factorization\\Math_Ops.cpp",
               "RelativeToolTip": "Math_Ops.cpp",
-              "ViewState": "AQIAAEwAAAAAAAAAAAAAAFUAAAAiAAAA",
+              "ViewState": "AQIAAGoAAAAAAAAAAAAqwHwAAAByAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-07-16T11:38:29.247Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\CodeRepo\\Portfolio\\QRFactorization\\QR_Factorization\\main.cpp",
               "RelativeDocumentMoniker": "main.cpp",
@@ -60,8 +59,7 @@
               "RelativeToolTip": "main.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-07-16T11:34:12.274Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-16T11:34:12.274Z"
             }
           ]
         }
