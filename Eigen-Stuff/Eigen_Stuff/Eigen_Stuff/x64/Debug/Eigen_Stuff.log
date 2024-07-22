@@ -1,0 +1,5 @@
+﻿  Matrices_Ops.cpp
+C:\CodeRepo\Portfolio\Eigen-Stuff\Eigen_Stuff\Matrices_Ops.cpp(47,15): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  main.cpp
+  Generating Code...
+  Eigen_Stuff.vcxproj -> C:\CodeRepo\Portfolio\Eigen-Stuff\Eigen_Stuff\x64\Debug\Eigen_Stuff.exe
